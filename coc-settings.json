@@ -1,0 +1,4 @@
+{
+  "coc.preferences.formatOnSave": true,
+  "Lua.telemetry.enable": false
+}
