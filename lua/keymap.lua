@@ -15,3 +15,14 @@ vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
 vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<cr>', { noremap = true, silent = true })
+
+vim.keymap.set(
+  'n',
+  '<C-p>',
+  "<cmd>lua require('fzf-lua').files()<cr>", { noremap = true, silent = true }
+)
+vim.keymap.set(
+  'n',
+  '<C-_>', "<cmd>lua require('fzf-lua').grep({ search = '' })<cr>",
+  { noremap = true, silent = true }
+)

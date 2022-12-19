@@ -1,23 +1,11 @@
 vim.g.coc_global_extensions = { 'coc-json', 'coc-sumneko-lua', 'coc-prettier' }
 
--- Some servers have issues with backup files, see #649
-vim.opt.backup = false
-vim.opt.writebackup = false
-
--- Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
--- delays and poor user experience
-vim.opt.updatetime = 300
-
--- Always show the signcolumn, otherwise it would shift the text each time
--- diagnostics appeared/became resolved
-vim.opt.signcolumn = "yes"
-
 local keyset = vim.keymap.set
 -- Autocomplete
 function _G.check_back_space()
-	local col = vim.fn.col('.') - 1
-	---@diagnostic disable-next-line: undefined-field
-	return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
+  local col = vim.fn.col('.') - 1
+  ---@diagnostic disable-next-line: undefined-field
+  return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
 end
 
 -- Use Tab for trigger completion with characters ahead and navigate
@@ -52,15 +40,15 @@ keyset("n", "gr", "<Plug>(coc-references)", { silent = true })
 
 -- Use K to show documentation in preview window
 function _G.show_docs()
-	---@diagnostic disable-next-line: missing-parameter
-	local cw = vim.fn.expand('<cword>')
-	if vim.fn.index({ 'vim', 'help' }, vim.bo.filetype) >= 0 then
-		vim.api.nvim_command('h ' .. cw)
-	elseif vim.api.nvim_eval('coc#rpc#ready()') then
-		vim.fn.CocActionAsync('doHover')
-	else
-		vim.api.nvim_command('!' .. vim.o.keywordprg .. ' ' .. cw)
-	end
+  ---@diagnostic disable-next-line: missing-parameter
+  local cw = vim.fn.expand('<cword>')
+  if vim.fn.index({ 'vim', 'help' }, vim.bo.filetype) >= 0 then
+    vim.api.nvim_command('h ' .. cw)
+  elseif vim.api.nvim_eval('coc#rpc#ready()') then
+    vim.fn.CocActionAsync('doHover')
+  else
+    vim.api.nvim_command('!' .. vim.o.keywordprg .. ' ' .. cw)
+  end
 end
 
 keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true })
@@ -69,9 +57,9 @@ keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true })
 -- Highlight the symbol and its references on a CursorHold event(cursor is idle)
 vim.api.nvim_create_augroup("CocGroup", {})
 vim.api.nvim_create_autocmd("CursorHold", {
-	group = "CocGroup",
-	command = "silent call CocActionAsync('highlight')",
-	desc = "Highlight symbol under cursor on CursorHold"
+  group = "CocGroup",
+  command = "silent call CocActionAsync('highlight')",
+  desc = "Highlight symbol under cursor on CursorHold"
 })
 
 
@@ -86,18 +74,18 @@ keyset("n", "<leader>f", "<Plug>(coc-format-selected)", { silent = true })
 
 -- Setup formatexpr specified filetype(s)
 vim.api.nvim_create_autocmd("FileType", {
-	group = "CocGroup",
-	pattern = "typescript,json",
-	command = "setl formatexpr=CocAction('formatSelected')",
-	desc = "Setup formatexpr specified filetype(s)."
+  group = "CocGroup",
+  pattern = "typescript,json",
+  command = "setl formatexpr=CocAction('formatSelected')",
+  desc = "Setup formatexpr specified filetype(s)."
 })
 
 -- Update signature help on jump placeholder
 vim.api.nvim_create_autocmd("User", {
-	group = "CocGroup",
-	pattern = "CocJumpPlaceholder",
-	command = "call CocActionAsync('showSignatureHelp')",
-	desc = "Update signature help on jump placeholder"
+  group = "CocGroup",
+  pattern = "CocJumpPlaceholder",
+  command = "call CocActionAsync('showSignatureHelp')",
+  desc = "Update signature help on jump placeholder"
 })
 
 -- Apply codeAction to the selected region
@@ -143,9 +131,9 @@ local opts = { silent = true, nowait = true, expr = true }
 keyset("n", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
 keyset("n", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
 keyset("i", "<C-f>",
-	'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1)<cr>" : "<Right>"', opts)
+  'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1)<cr>" : "<Right>"', opts)
 keyset("i", "<C-b>",
-	'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0)<cr>" : "<Left>"', opts)
+  'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0)<cr>" : "<Left>"', opts)
 keyset("v", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
 keyset("v", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
 
