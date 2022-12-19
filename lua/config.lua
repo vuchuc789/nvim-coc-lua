@@ -17,7 +17,7 @@ vim.opt.cursorline = true
 vim.opt.number = true
 -- vim.opt.relativenumber = true
 vim.opt.termguicolors = true
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = 'yes'
 
 -- Behavior
 vim.opt.scrolloff = 1
