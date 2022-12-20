@@ -29,7 +29,20 @@ vim.keymap.set(
 )
 vim.keymap.set(
   'n',
-  '<C-_>',
+  '<space>f',
   "<cmd>lua require('fzf-lua').grep({ search = '' })<cr>",
+  { noremap = true, silent = true }
+)
+
+vim.keymap.set(
+  'n',
+  '<Tab>',
+  '<cmd>BufferLineCycleNext<cr>',
+  { noremap = true, silent = true }
+)
+vim.keymap.set(
+  'n',
+  '<S-Tab>',
+  '<cmd>BufferLineCyclePrev<cr>',
   { noremap = true, silent = true }
 )
