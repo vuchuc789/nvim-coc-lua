@@ -29,3 +29,6 @@ vim.opt.showmode = false
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.updatetime = 300
+
+-- Theme
+vim.cmd('colorscheme kanagawa')

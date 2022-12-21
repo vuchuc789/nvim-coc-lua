@@ -51,6 +51,31 @@ require('packer').startup(function(use)
     requires = 'nvim-tree/nvim-web-devicons',
   })
 
+  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+  use('nvim-treesitter/nvim-treesitter-textobjects')
+  use('nvim-treesitter/nvim-treesitter-context')
+  use('windwp/nvim-ts-autotag')
+  use('p00f/nvim-ts-rainbow')
+
+  use('lukas-reineke/indent-blankline.nvim')
+
+  use('numToStr/Comment.nvim')
+  use('JoosepAlviste/nvim-ts-context-commentstring')
+
+  use({
+    'kylechui/nvim-surround',
+    tag = '*', -- Use for stability; omit to use `main` branch for the latest features
+  })
+
+  use({
+    'lewis6991/gitsigns.nvim',
+    -- tag = 'release' -- To use the latest release
+  })
+
+  use('rafamadriz/friendly-snippets')
+
+  use('rebelot/kanagawa.nvim')
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

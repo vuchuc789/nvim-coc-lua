@@ -1,5 +1,20 @@
-vim.g.coc_global_extensions =
-  { 'coc-json', 'coc-sumneko-lua', 'coc-prettier', 'coc-stylua' }
+vim.g.coc_global_extensions = {
+  'coc-json',
+  'coc-prettier',
+  'coc-sumneko-lua',
+  'coc-stylua',
+  'coc-pairs',
+  'coc-snippets',
+  'coc-spell-checker',
+  'coc-tsserver',
+  'coc-eslint',
+  'coc-emmet',
+  'coc-css',
+  'coc-styled-components',
+  'coc-yaml',
+  'coc-docker',
+  'coc-emoji',
+}
 
 local keyset = vim.keymap.set
 -- Autocomplete
@@ -129,16 +144,17 @@ keyset(
 -- Run the Code Lens actions on the current line
 keyset('n', '<leader>cl', '<Plug>(coc-codelens-action)', opts)
 
+-- Use treesitter textobject instead
 -- Map function and class text objects
 -- NOTE: Requires 'textDocument.documentSymbol' support from the language server
-keyset('x', 'if', '<Plug>(coc-funcobj-i)', opts)
-keyset('o', 'if', '<Plug>(coc-funcobj-i)', opts)
-keyset('x', 'af', '<Plug>(coc-funcobj-a)', opts)
-keyset('o', 'af', '<Plug>(coc-funcobj-a)', opts)
-keyset('x', 'ic', '<Plug>(coc-classobj-i)', opts)
-keyset('o', 'ic', '<Plug>(coc-classobj-i)', opts)
-keyset('x', 'ac', '<Plug>(coc-classobj-a)', opts)
-keyset('o', 'ac', '<Plug>(coc-classobj-a)', opts)
+-- keyset('x', 'if', '<Plug>(coc-funcobj-i)', opts)
+-- keyset('o', 'if', '<Plug>(coc-funcobj-i)', opts)
+-- keyset('x', 'af', '<Plug>(coc-funcobj-a)', opts)
+-- keyset('o', 'af', '<Plug>(coc-funcobj-a)', opts)
+-- keyset('x', 'ic', '<Plug>(coc-classobj-i)', opts)
+-- keyset('o', 'ic', '<Plug>(coc-classobj-i)', opts)
+-- keyset('x', 'ac', '<Plug>(coc-classobj-a)', opts)
+-- keyset('o', 'ac', '<Plug>(coc-classobj-a)', opts)
 
 -- Remap <C-f> and <C-b> to scroll float windows/popups
 ---@diagnostic disable-next-line: redefined-local

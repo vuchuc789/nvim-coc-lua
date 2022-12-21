@@ -1,4 +1,21 @@
 {
   "coc.preferences.formatOnSave": true,
+  "javascript.validate.enable": true,
+  "javascript.suggestionActions.enabled": false,
+  "typescript.validate.enable": true,
+  "typescript.suggestionActions.enabled": false,
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "eslint.autoFixOnSave": true,
+  "snippets.extends": {
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"],
+    "typescriptreact": ["javascript"]
+  },
+  "coc.source.emoji.filetypes": null,
   "Lua.telemetry.enable": false
 }
