@@ -14,6 +14,7 @@ vim.g.coc_global_extensions = {
   'coc-yaml',
   'coc-docker',
   'coc-emoji',
+  'coc-rust-analyzer',
 }
 
 local keyset = vim.keymap.set
