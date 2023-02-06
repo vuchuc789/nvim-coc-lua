@@ -67,6 +67,7 @@ require('packer').startup(function(use)
     tag = '*', -- Use for stability; omit to use `main` branch for the latest features
   })
 
+  use('tpope/vim-fugitive')
   use({
     'lewis6991/gitsigns.nvim',
     -- tag = 'release' -- To use the latest release
