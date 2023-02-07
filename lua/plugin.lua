@@ -75,7 +75,8 @@ require('packer').startup(function(use)
 
   use('rafamadriz/friendly-snippets')
 
-  use({ 'catppuccin/nvim', as = 'catppuccin' })
+  -- use({ 'catppuccin/nvim', as = 'catppuccin' })
+  use('rebelot/kanagawa.nvim')
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
