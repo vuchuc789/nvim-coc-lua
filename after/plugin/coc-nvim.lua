@@ -16,6 +16,7 @@ vim.g.coc_global_extensions = {
   'coc-emoji',
   'coc-rust-analyzer',
   'coc-highlight',
+  'coc-go',
 }
 
 local keyset = vim.keymap.set

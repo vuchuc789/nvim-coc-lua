@@ -27,6 +27,9 @@ require('packer').startup(function(use)
   -- Coc
   use({ 'neoclide/coc.nvim', branch = 'release' })
 
+  -- Editor config
+  use('editorconfig/editorconfig-vim')
+
   -- File explore
   use({
     'nvim-tree/nvim-tree.lua',
