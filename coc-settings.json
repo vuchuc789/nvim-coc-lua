@@ -17,6 +17,5 @@
     "typescriptreact": ["javascript"]
   },
   "coc.source.emoji.filetypes": null,
-  "Lua.telemetry.enable": false,
   "colors.enable": true
 }
