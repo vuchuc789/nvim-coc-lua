@@ -29,8 +29,14 @@ vim.keymap.set(
 )
 vim.keymap.set(
   'n',
-  '<space>f',
+  '<C-_>',
   "<cmd>lua require('fzf-lua').grep({ search = '' })<cr>",
+  { noremap = true, silent = true }
+)
+vim.keymap.set(
+  'n',
+  '<C-\\>',
+  "<cmd>lua require('fzf-lua').grep_project()<cr>",
   { noremap = true, silent = true }
 )
 
