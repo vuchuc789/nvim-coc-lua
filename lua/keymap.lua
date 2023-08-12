@@ -1,3 +1,5 @@
+vim.g.mapleader = ' '
+
 vim.keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
 vim.keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
 vim.keymap.set('v', 'j', 'gj', { noremap = true, silent = true })
@@ -23,19 +25,19 @@ vim.keymap.set(
 
 vim.keymap.set(
   'n',
-  '<C-p>',
+  '<leader>ff',
   "<cmd>lua require('fzf-lua').files()<cr>",
   { noremap = true, silent = true }
 )
 vim.keymap.set(
   'n',
-  '<C-_>',
+  '<leader>fa',
   "<cmd>lua require('fzf-lua').grep({ search = '' })<cr>",
   { noremap = true, silent = true }
 )
 vim.keymap.set(
   'n',
-  '<C-\\>',
+  '<leader>fw',
   "<cmd>lua require('fzf-lua').grep_project()<cr>",
   { noremap = true, silent = true }
 )

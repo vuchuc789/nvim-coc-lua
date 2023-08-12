@@ -1,6 +1,7 @@
 vim.g.coc_global_extensions = {
   'coc-json',
-  'coc-prettier',
+  -- 'coc-prettier',
+  '@raidou/coc-prettier-v3',
   'coc-sumneko-lua',
   'coc-stylua',
   'coc-pairs',

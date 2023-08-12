@@ -4,6 +4,7 @@ vim.opt.shiftround = true
 vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
 vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
 
 -- Search
 vim.opt.ignorecase = true
@@ -18,6 +19,7 @@ vim.opt.number = true
 -- vim.opt.relativenumber = true
 vim.opt.termguicolors = true
 vim.opt.signcolumn = 'yes'
+vim.opt.numberwidth = 2
 
 -- Behavior
 vim.opt.scrolloff = 1
@@ -29,3 +31,4 @@ vim.opt.showmode = false
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.updatetime = 300
+vim.opt.mouse = 'a'

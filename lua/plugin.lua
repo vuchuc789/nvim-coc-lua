@@ -27,9 +27,6 @@ require('packer').startup(function(use)
   -- Coc
   use({ 'neoclide/coc.nvim', branch = 'release' })
 
-  -- Editor config
-  -- use('editorconfig/editorconfig-vim')
-
   -- File explore
   use({
     'nvim-tree/nvim-tree.lua',
@@ -82,7 +79,7 @@ require('packer').startup(function(use)
   })
 
   -- Git
-  use('tpope/vim-fugitive')
+  -- use('tpope/vim-fugitive')
   use({
     'lewis6991/gitsigns.nvim',
     -- tag = 'release' -- To use the latest release
@@ -96,8 +93,7 @@ require('packer').startup(function(use)
   use('tpope/vim-repeat')
 
   -- Theme
-  -- use({ 'catppuccin/nvim', as = 'catppuccin' })
-  use('rebelot/kanagawa.nvim')
+  use('olimorris/onedarkpro.nvim')
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
