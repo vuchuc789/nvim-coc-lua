@@ -13,6 +13,11 @@ require('nvim-tree').setup({
       enable = true,
     },
     add_trailing = true,
+    icons = {
+      show = {
+        folder = false,
+      },
+    },
   },
   view = {
     adaptive_size = true,
