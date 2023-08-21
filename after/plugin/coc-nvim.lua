@@ -18,6 +18,7 @@ vim.g.coc_global_extensions = {
   'coc-rust-analyzer',
   'coc-highlight',
   'coc-go',
+  'coc-pyright',
   '@yaegassy/coc-astro',
   '@yaegassy/coc-tailwindcss3',
   '@yaegassy/coc-nginx',

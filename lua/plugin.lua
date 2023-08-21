@@ -63,7 +63,7 @@ require('packer').startup(function(use)
   use('windwp/nvim-ts-autotag')
 
   -- Rainbow parentheses
-  use('HiPhish/rainbow-delimiters.nvim')
+  -- use('HiPhish/rainbow-delimiters.nvim')
 
   -- Indent line
   use('lukas-reineke/indent-blankline.nvim')
