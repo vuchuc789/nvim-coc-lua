@@ -93,7 +93,7 @@ require('packer').startup(function(use)
   use('tpope/vim-repeat')
 
   -- Theme
-  use('olimorris/onedarkpro.nvim')
+  use('rebelot/kanagawa.nvim')
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
