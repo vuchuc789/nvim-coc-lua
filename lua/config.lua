@@ -32,3 +32,5 @@ vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.updatetime = 300
 vim.opt.mouse = 'a'
+
+vim.g.python3_host_prog = '/home/chuc/.pyenv/shims/python'

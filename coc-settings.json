@@ -17,5 +17,6 @@
     "typescriptreact": ["javascript"]
   },
   "coc.source.emoji.filetypes": null,
-  "colors.enable": true
+  "colors.enable": true,
+  "snippets.ultisnips.pythonPrompt": false
 }
