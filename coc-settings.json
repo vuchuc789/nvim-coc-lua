@@ -18,5 +18,8 @@
   },
   "coc.source.emoji.filetypes": null,
   "colors.enable": true,
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "cSpell.userWords": [
+    "kubernetes"
+  ]
 }
